@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;;
+    ;
+}
+
+.background-site img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: -3;
+}
+
+.background-color {
+    position: fixed;
+    background: linear-gradient(0deg, rgba(53, 67, 85, 1) 10%, rgba(0, 0, 0, 0.6026785714285714) 100%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(21, 29, 39);
+    box-shadow: 1px 2px 3px #000000;
+    width: 100%;
+    height: 80px;
+}
+
+.navbar-left img {
+    width: 150px;
+    margin-left: 65px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.navbar-rigth {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+}
+
+.navbar-rigth img {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Estilo de animação de loading */
+.loading {
+    border: 5px solid #f3f3f3; /* Cor de fundo do círculo */
+    border-top: 5px solid #d10000; /* Cor do indicador de carregamento */
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    position: fixed;
+    right: 40px;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Oculta o elemento */
+.hidden {
+    display: none;
+}
+
+.add-cart {
+    width: 70px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #354355;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.add-cart:hover {
+    background-color: rgb(201, 0, 0);
+    font-size: 18px;
+}
+
+.addCart-quantity {
+    font-weight: bold;
+}
+
+/* Estilo de animação de loading */
+.loading-cart {
+    border: 5px solid #f3f3f3; /* Cor de fundo do círculo */
+    border-top: 5px solid #d10000; /* Cor do indicador de carregamento */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    position: fixed;
+    top: 82px;
+    left: 180px;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Oculta o elemento */
+.hidden-cart {
+    display: none;
+}
+
+.card-item-checkin {
+    width: 550px;
+    position: fixed;
+    top: 70px;
+    right: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212a35;
+    filter: drop-shadow(-12px 14px 10px rgba(0, 0, 0, 0.8));
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    z-index: 500;
+    visibility: hidden;
+}
+
+.mascara-checkin {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 100;
+    visibility: hidden;
+}
+
+.container-checkin {
+    display: flex;
+    width: 550px;
+    height: 120px;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(53, 67, 85);
+    padding-bottom: 20px;
+}
+
+.img-checkin {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 15px;
+}
+
+.info-product-checkin{
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.select-quantity {
+    position: relative;
+    top: 64px;
+    right: 385px;
+    width: 140px;
+    height: 35px;
+    background-color: #354355;
+    color: white;
+    border: transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 700;
+    outline: none;     /* Remove a borda ao focar */
+    -webkit-appearance: menulist-button; /* Remove o estilo padrão no Safari e Chrome */
+    -moz-appearance: menulist-button;    /* Remove o estilo padrão no Firefox */
+    appearance: menulist-button;         /* Remove o estilo padrão nos navegadores modernos */
+    padding-left: 8px;             /* Adiciona um pouco de padding para uma aparência melhor */
+    cursor: pointer;
+}
+
+.value {
+    font-size: 18px;
+    position: relative;
+    top: 72px;
+    right: -60px;
+    font-weight: bold;
+}
+
+.delet-icon-checkin {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    position: relative;
+    margin-top: 70px;
+    right: -65px;
+}
+
+.delet-icon-checkin img:hover {
+    filter: invert(31%) sepia(93%) saturate(5881%) hue-rotate(355deg) brightness(93%) contrast(101%);
+}
+
+.delet-icon-checkin:active {
+    background-color: transparent;
+}
+
+.finish-checkout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.finish-value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.finish-checkout button {
+    background-color: rgb(145, 0, 0);
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.finish-checkout button:hover {
+    background-color: rgb(233, 0, 0);
+    transition: 0.2s ease-in-out;
+}
+
+.finish-checkout buttom:active {
+    font-size: 16px;
+}
+
+.finish-cart img {
+    
+    margin-right: 10px;
+}
+
+main {
+    color: white;
+    margin-top: 0px;
+}
+
+.info-VPs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.info-VPs h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.info-VPs p {
+    font-size: 22px;
+}
+
+.products-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.product-vp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #151d27;
+    width: 220px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.img-card {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-vp p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button-value {
+    background-color: #354355;
+    border: 1px solid #435467;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-value:hover {
+    background-color: rgb(201, 0, 0);
+}
+
+.cart-button {
+    display: none;
+}
+
+button:hover .cart-button {
+    /* com este seletor */
+    display: inline;
+    /* sempre que eu passar o mouse por cima do butto, o img cart vai aparecer */
+}
+
+button:active {
+    font-size: 14px;
+    background-color: rgb(202, 38, 38);
+}
