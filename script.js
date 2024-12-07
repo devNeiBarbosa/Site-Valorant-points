@@ -11,7 +11,7 @@ menuProducts.forEach(product => {
         <img class="img-card" src="${product.src}" alt="Info VPs - R$320,00" width="220px">
         <p>${product.name}</p>
         <button class="button-value">
-            <img class="cart-button" src="assets/img/cart.png" alt="image cart"width="16px"><b>${formatCurrency(product.price)}</b>
+            <img class="cart-button" src="assets/cart.png" alt="image cart"width="16px"><b>${formatCurrency(product.price)}</b>
         </button>
     </div> 
     `
@@ -54,7 +54,7 @@ function viewProductCheckin(productsArray) {
             <p class="info-product-checkin">${product.name}</p>
 
             <p class="value">R$ ${formatCurrency(product.price)}</p>
-            <button class="delet-icon-checkin"><img src="assets/img/lixo icon.png" alt="delet-icon" width="18px"></button>
+            <button class="delet-icon-checkin"><img src="assets/lixo icon.png" alt="delet-icon" width="18px"></button>
 
             <select class="select-quantity" name="quantidade de itens" id="select-quantity-id">
                 <option value="1" selected>1</option>
@@ -112,7 +112,7 @@ function updateTotalValue() {
         const finishCheckoutDiv = document.querySelector(".finish-checkout");
         finishCheckoutDiv.innerHTML = `
             <p class="finish-value">Total: ${formatCurrency(total)}</p> 
-            <button><img class="finish-cart" src="/assets/img/cart.png" alt="carrinho de compra" width="16px">FINALIZAR COMPRA</button>
+            <button><img class="finish-cart" src="assets/cart.png" alt="carrinho de compra" width="16px">FINALIZAR COMPRA</button>
         `;  
     }, 400);
 }
